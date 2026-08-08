@@ -1,0 +1,58 @@
+directory: ~/music/beets            # Music destination
+library: ~/music/musiclibrary.db    # Database file location
+
+paths:
+    default: $albumartist/$album%aunique{}/$track $title
+    singleton: $albumartist/$album%aunique{}/$track $title
+    comp: Compilations/$album%aunique{}/$track $title
+    albumtype:soundtrack: Soundtracks/$album/%track $title
+    # TODO: configure Anime OST and Game OST folder
+
+import:
+    move: no     # Move files to new location
+    copy: yes    # Copy files to new location
+    write: yes   # Allow tag modification
+    log: ~/music/beet.log
+    duplicate_action: skip  # Skip duplicate files
+
+plugins:
+  - spotify      # Fetch spotify metadata
+  - musicbrainz  # Fetch musicbrainz metadata
+  - fetchart     # Fetch album cover art from various sources
+  - embedart     # Embed album art images into file metadata
+  - ftintitle    # Move "featured" artists from the artist field to the title field
+  - scrub        # Clean extraneaous metadata from music files
+  - duplicates   # detect duplicates
+  - chroma
+
+musicbrainz:
+    data_source_mismatch_penalty: 0.5
+
+spotify:
+    data_source_mismatch_penalty: 0.0
+
+fetchart:
+    auto: yes
+    minwidth: 800
+    maxwidth: 0
+    enforce_ratio: no
+    sources:
+      - filesystem
+      - coverart
+      - itunes
+      - amazon
+      - albumart
+
+embedart:
+    auto: yes
+
+ftintitle:
+    auto: yes
+    format: (feat. {0})
+
+scrub:
+    auto: yes
+
+duplicates:
+    count: yes
+    keys: [mb_trackid, mb_albumid]

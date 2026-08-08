@@ -1,0 +1,181 @@
+{
+    "workbench.colorCustomizations": {
+        // Icons
+        "icon.foreground": "#e5dec9",
+
+        // Base
+        "editor.background": "#242120",
+        "editor.foreground": "#e5dec9",
+
+        // Accent
+        "focusBorder": "#8ba37e",
+        "selection.background": "#8ba37e",
+
+        // Activity Bar
+        "activityBar.background": "#242120",
+        "activityBar.foreground": "#e5dec9",
+        "activityBar.inactiveForeground": "#665c54",
+        "activityBar.activeBorder": "#8ba37e",
+        "activityBarBadge.background": "#8ba37e",
+        "activityBarBadge.foreground": "#242120",
+
+        
+        // Sidebar
+        "sideBar.background": "#242120",
+        "sideBar.foreground": "#e5dec9",
+        "sideBar.border": "#36312f",
+
+        // Tabs
+        "tab.activeBackground": "#242120",
+        "tab.activeForeground": "#e5dec9",
+        "tab.activeBorderTop": "#8ba37e",
+        "tab.inactiveBackground": "#242120",
+        "tab.inactiveForeground": "#665c54",
+        "tab.hoverBackground": "#2d2928",
+
+        // Lists
+        "list.activeSelectionBackground": "#8ba37e33",
+        "list.activeSelectionForeground": "#e5dec9",
+        "list.hoverBackground": "#36312f",
+        "list.focusBackground": "#8ba37e22",
+
+        // Editor
+        "editorCursor.foreground": "#8ba37e",
+        "editor.selectionBackground": "#8ba37e55",
+        "editor.selectionHighlightBackground": "#8ba37e22",
+        "editor.lineHighlightBackground": "#2d2928",
+        "editor.wordHighlightBackground": "#8ba37e22",
+        "editor.wordHighlightStrongBackground": "#8ba37e44",
+
+        "editorLineNumber.foreground": "#665c54",
+        "editorLineNumber.activeForeground": "#8ba37e",
+
+        "editorIndentGuide.background1": "#36312f",
+        "editorIndentGuide.activeBackground1": "#665c54",
+
+        // Diff
+        "diffEditor.insertedTextBackground": "#8ba37e22",
+        "diffEditor.removedTextBackground": "#c6685d22",
+
+        // Status Bar
+        "statusBar.background": "#242120",
+        "statusBar.foreground": "#e5dec9",
+        "statusBar.border": "#36312f",
+
+        // Top Toolbar
+        "titleBar.activeBackground": "#242120",
+        "titleBar.activeForeground": "#e5dec9",
+        "titleBar.inactiveBackground": "#242120",
+        "titleBar.inactiveForeground": "#665c54",
+        "titleBar.border": "#36312f",
+
+        // Tool Bar Dropdown Menu
+        "menubar.selectionBackground": "#36312f",
+        "menubar.selectionForeground": "#8ba37e",
+        "menu.background": "#242120",
+        "menu.foreground": "#e5dec9",
+        "menu.selectionBackground": "#36312f",
+        "menu.selectionForeground": "#8ba37e",
+        "menu.separatorBackground": "#36312f",
+        "menu.border": "#36312f",
+
+        "commandCenter.background": "#242120",
+        "commandCenter.foreground": "#e5dec9",
+        "commandCenter.activeBackground": "#36312f",
+        "commandCenter.activeForeground": "#8ba37e",
+
+        "toolbar.hoverBackground": "#36312f",
+        "toolbar.activeBackground": "#8ba37e22",
+
+        // Terminal
+        "terminal.background": "#242120",
+        "terminal.foreground": "#e5dec9",
+        "terminal.selectionBackground": "#8ba37e55",
+
+        "terminal.ansiBlack": "#242120",
+        "terminal.ansiRed": "#c6685d",
+        "terminal.ansiGreen": "#8ba37e",
+        "terminal.ansiYellow": "#cb9168",
+        "terminal.ansiBlue": "#67808a",
+        "terminal.ansiCyan": "#769f93",
+        "terminal.ansiWhite": "#e5dec9",
+    
+        "terminal.ansiBrightBlack": "#36312f",
+        "terminal.ansiBrightRed": "#db8177",
+        "terminal.ansiBrightGreen": "#9cb793",
+        "terminal.ansiBrightYellow": "#e2aa82",
+        "terminal.ansiBrightBlue": "#809ba6",
+        "terminal.ansiBrightMagenta": "#bc919f",
+        "terminal.ansiBrightCyan": "#92b9ad",
+        "terminal.ansiBrightWhite": "#f4eedc",
+
+        // Terminal Panel Toolbar
+        "panel.background": "#242120",
+        "panel.border": "#36312f",
+
+        "panelTitle.activeForeground": "#8ba37e",
+        "panelTitle.inactiveForeground": "#e5dec9",
+        "panelTitle.activeBorder": "#8ba37e",
+
+        "panelSection.border": "#36312f",
+
+        // Terminal tabs
+        "terminal.tab.activeBorder": "#8ba37e",
+        "terminal.tab.activeForeground": "#e5dec9",
+        "terminal.tab.inactiveForeground": "#665c54",
+        "terminal.tab.hoverBackground": "#36312f",
+        "terminal.tab.activeBackground": "#242120",
+
+        // Terminal toolbar buttons
+        "terminalCommandDecoration.defaultBackground": "#8ba37e",
+        "terminalCommandDecoration.successBackground": "#8ba37e",
+        "terminalCommandDecoration.errorBackground": "#c6685d",
+        "toolbar.hoverOutline": "#8ba37e",
+
+        // Panel actions (split, close, dropdown buttons)
+        "editorGroupHeader.tabsBackground": "#242120",
+        "editorGroupHeader.tabsBorder": "#36312f",
+        "editorGroupHeader.border": "#36312f"
+    },
+    
+    "workbench.colorTheme": "Gruvbox Material Dark",
+    "workbench.iconTheme": "catppuccin-macchiato",
+    "workbench.productIconTheme": "material-product-icons",
+    "editor.fontFamily": "'JetBrains Mono'",
+    "editor.fontLigatures": false,
+    "editor.fontSize": 13,
+    "editor.lineHeight": 1.6,
+    "debug.console.fontSize": 13,
+    "terminal.integrated.fontSize": 13,
+    "markdown.preview.fontSize": 13,
+    "files.autoSave": "afterDelay",
+    "editor.codeActionsOnSave": {
+        
+    },
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "explorer.confirmDelete": false,
+    "chat.instructionsFilesLocations": {
+        ".github/instructions": true,
+        "C:\\Users\\Nate\\AppData\\Local\\Temp\\postman-collections-post-response.instructions.md": true,
+        "C:\\Users\\Nate\\AppData\\Local\\Temp\\postman-collections-pre-request.instructions.md": true,
+        "C:\\Users\\Nate\\AppData\\Local\\Temp\\postman-folder-post-response.instructions.md": true,
+        "C:\\Users\\Nate\\AppData\\Local\\Temp\\postman-folder-pre-request.instructions.md": true,
+        "C:\\Users\\Nate\\AppData\\Local\\Temp\\postman-http-request-post-response.instructions.md": true,
+        "C:\\Users\\Nate\\AppData\\Local\\Temp\\postman-http-request-pre-request.instructions.md": true,
+        "/tmp/postman-collections-post-response.instructions.md": true,
+        "/tmp/postman-collections-pre-request.instructions.md": true,
+        "/tmp/postman-folder-post-response.instructions.md": true,
+        "/tmp/postman-folder-pre-request.instructions.md": true,
+        "/tmp/postman-http-request-post-response.instructions.md": true,
+        "/tmp/postman-http-request-pre-request.instructions.md": true
+    },
+    "postman.mcp.notifications.postmanMCP": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "workbench.startupEditor": "none",
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
+    "workbench.editor.enablePreview": false,
+    "mdb.mcp.server": "prompt",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "svelte.enable-ts-plugin": true
+}

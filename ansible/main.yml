@@ -1,0 +1,99 @@
+---
+- name: Play that automates package installation for a local Arch based system
+  hosts: localhost 
+  
+  tasks: 
+
+    # --- 1. Update System ---
+
+    - name: Upgrade official packages
+      community.general.pacman:
+        update_cache: true
+        upgrade: true 
+      become: true
+
+    # --- 2. Install official packages ---
+
+    - name: Install fonts
+      community.general.pacman:
+        update_cache: true
+        state: present
+        name:
+          - inter-font
+          - ttf-jetbrains-mono
+      become: true
+
+    - name: Install packages 
+      community.general.pacman:
+        update_cache: true
+        state: present
+        name:
+          - ly                        # display/login manager
+          - btop                      # system resources
+          - fastfetch                 # system info
+          - git                       # version control
+          - keepassxc                 # password manager
+          - kitty                     # terminal
+          - firefox                   # browser
+          - obsidian                  # note taking
+          - spotify-launcher          # music player
+          - steam                     # games
+          - stow                      # dotfiles manager
+          - vim                       # text editor
+          - coolercontrol             # fan control UI
+          - coolercontrold            # fan control daemon
+          - lact                      # GPU undervolting
+          - zram-generator            # swap
+          - limine                    # boot loader
+          - snapper                   # btrfs snapshot creator
+          - snap-pac                  # pacman automated snapshots
+          - btrfs-assistant           # GUI based snapshot management
+          - btrfs-progs               # btrfs support
+          - adw-gtk-theme             # gtk theme
+          - nwg-look                  # gtk theme GUI
+      become: true
+
+    # --- 3. Install AUR packages ---
+
+    - name: Create the `aur_builder` user
+      become: true
+      ansible.builtin.user:
+        name: aur_builder
+        create_home: yes
+        group: wheel
+
+    - name: Allow the `aur_builder` user to run `sudo pacman` without a password
+      become: true
+      ansible.builtin.lineinfile:
+        path: /etc/sudoers.d/11-install-aur_builder
+        line: 'aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman'
+        create: yes
+        mode: 0644
+        validate: 'visudo -cf %s'
+
+    - name: Upgrade AUR packages
+      kewlfft.aur.aur: 
+        update_cache: true
+        upgrade: true
+        aur_only: true
+      become: true
+      become_user: aur_builder
+
+    - name: Install AUR packages 
+      kewlfft.aur.aur: 
+        use: yay
+        state: present
+        name: 
+          - onlyoffice-bin                    # document editor
+          - insync                            # google drive sync
+          - spicetify-cli                     # spotify rice
+          - unimatrix-git                     # matrix
+          - vesktop-bin                       # discord rice
+          - visual-studio-code-bin            # official vs code
+          - xone-dkms                         # xbox series x driver
+          - xone-dongle-firmware              # xbox controller firmware 
+          - limine-snapper-sync               # snapper integration with limine
+          - journalctl-desktop-notification   # notifications for efi capacity
+          # - gowall                            # wallpaper coloriser
+      become: true
+      become_user: aur_builder
